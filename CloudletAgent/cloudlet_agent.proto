@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+// Cloudlets Service methods used by the Cloudlet Agent
+service CloudletsAPI {
+  rpc Add (Cloudlet) returns (ResponseWithCloudlet) {}  // Adds a new fog device to the system
+}
+
+message Response {
+  int32 code = 1;
+  string message = 2;
+}
+
+message Cloudlet {
+  string id = 1;
+  string name = 2;
+  uint32 cpu_cores = 3;
+  float cpu_frequency = 4;
+  uint64 ram_size = 5;
+  uint64 rom_size = 6;
+  string os = 7;
+  string os_kernel = 8;
+  string ip = 9;
+  double latitude = 10;
+  double longitude = 11;
+  string country = 12;
+  string region = 13;
+  string city = 14;
+}
+
+message ResponseWithCloudlet {
+  Response status = 1;
+  Cloudlet cloudlet = 2;
+  string swarm_manager_address = 3;
+  string swarm_worker_token = 4;
+}
