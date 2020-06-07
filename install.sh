@@ -10,7 +10,7 @@ pip3 install grpcio protobuf docker
 
 echo
 echo Docker Installation
-curl -sSL https://get.docker.com | sh
+./docker_install.sh
 
 echo
 echo Adding insecure Docker Registry

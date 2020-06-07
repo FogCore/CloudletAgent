@@ -20,7 +20,7 @@ def required_type_input(message, old_value):
             if old_value:
                 break
             if not new_value:
-                print('An empty value is not valid.')
+                print('Empty value is not valid.')
                 print(message, f'[{old_value}]: ', end='')
             else:
                 break
