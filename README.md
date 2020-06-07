@@ -11,11 +11,11 @@ Fog Node Agent is a software installed on every fog node. It is used to manage t
    ```bash
    ssh <username>@<host_ip>
    ```
-
-4. Clone this repository and go to the created folder
+   
+2. Clone CloudletAgent repository and go to the created folder
 
    ```bash
-git clone https://github.com/FogCore/CloudletAgent.git && cd CloudletAgent
+   git clone https://github.com/FogCore/CloudletAgent.git && cd CloudletAgent
    ```
    
 3. Start the installation of the required components
@@ -25,9 +25,8 @@ git clone https://github.com/FogCore/CloudletAgent.git && cd CloudletAgent
    ```bash
    sudo ./install.sh
    ```
-
-
-5. Add a user to the docker group
+   
+4. Add a user to the docker group
 
    ```bash
    sudo usermod -aG docker $USER && newgrp - docker
@@ -40,13 +39,11 @@ git clone https://github.com/FogCore/CloudletAgent.git && cd CloudletAgent
 1. Set the environment variable that defines the URL of Cloudlets Service
 
    ```bash
-   export CLOUDLETS_SERVICE_URL="<ip_address>:<port>"
+   export CLOUDLETS_SERVICE_URL=<ip_address>:<port>
    ```
-
+   
 2. Run an agent.
 
    ```bash
-   ./app.py
+   CloudletAgent/app.py
    ```
-   
-
