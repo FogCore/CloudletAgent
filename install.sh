@@ -10,7 +10,8 @@ pip3 install grpcio protobuf docker
 
 echo
 echo Docker Installation
-./docker_install.sh
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+$DIR/docker_install.sh
 
 echo
 echo Adding insecure Docker Registry
